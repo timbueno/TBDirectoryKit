@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TBLoadingCell" rowHeight="66" id="iwb-PQ-uw5" customClass="TBLoadingCell" customModule="TBDirectoryKit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iwb-PQ-uw5" id="xyP-bT-kVr">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="65.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IVV-S7-adc" userLabel="CenteringView">
+                        <rect key="frame" x="108.5" y="2" width="103" height="63.5"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="gio-VR-euF">
+                                <rect key="frame" x="0.0" y="22.5" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkg-3I-oHf">
+                                <rect key="frame" x="28" y="21.5" width="75" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bkg-3I-oHf" firstAttribute="centerY" secondItem="IVV-S7-adc" secondAttribute="centerY" id="6iO-Ia-Q4X"/>
+                            <constraint firstItem="bkg-3I-oHf" firstAttribute="leading" secondItem="gio-VR-euF" secondAttribute="trailing" constant="8" id="MPc-ZA-VnY"/>
+                            <constraint firstItem="gio-VR-euF" firstAttribute="leading" secondItem="IVV-S7-adc" secondAttribute="leading" id="xUB-2A-iZH"/>
+                            <constraint firstAttribute="trailing" secondItem="bkg-3I-oHf" secondAttribute="trailing" id="y1s-QV-zbI"/>
+                            <constraint firstItem="gio-VR-euF" firstAttribute="centerY" secondItem="IVV-S7-adc" secondAttribute="centerY" id="zxj-Km-71v"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="IVV-S7-adc" secondAttribute="bottom" id="Q4T-gh-0DY"/>
+                    <constraint firstItem="IVV-S7-adc" firstAttribute="top" secondItem="xyP-bT-kVr" secondAttribute="top" constant="2" id="cjX-St-hS4"/>
+                    <constraint firstItem="IVV-S7-adc" firstAttribute="centerX" secondItem="xyP-bT-kVr" secondAttribute="centerX" id="oa0-vj-cZ3"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="activityIndicator" destination="gio-VR-euF" id="Qm4-GH-tL8"/>
+                <outlet property="loadingLabel" destination="bkg-3I-oHf" id="ufI-W9-syr"/>
+            </connections>
+            <point key="canvasLocation" x="501" y="289"/>
+        </tableViewCell>
+    </objects>
+</document>

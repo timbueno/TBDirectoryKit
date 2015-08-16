@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TBFileCell" rowHeight="66" id="ZmL-lC-DzW" customClass="TBFileCell" customModule="TBDirectoryKit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZmL-lC-DzW" id="ZCk-VR-ThK">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="65.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Harry Potter - Part 1.mp3" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbn-FE-cwy">
+                        <rect key="frame" x="16" y="16" width="238" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="158.2 MB" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1JT-Ry-vHK">
+                        <rect key="frame" x="16" y="33" width="53" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8wa-jF-Sj2" userLabel="Button Progress View">
+                        <rect key="frame" x="254" y="0.0" width="66" height="65.5"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PUK-Gp-Emj" customClass="CircleProgressView" customModule="TBDirectoryKit" customModuleProvider="target">
+                                <rect key="frame" x="15.5" y="15.5" width="35" height="35"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="XUm-fI-78S"/>
+                                    <constraint firstAttribute="width" constant="35" id="uIt-am-mZr"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="trackWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackBackgroundColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="trackBorderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGf-H9-vVy">
+                                <rect key="frame" x="0.0" y="0.0" width="66" height="65.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <connections>
+                                    <action selector="actionButtonPressed:" destination="ZmL-lC-DzW" eventType="touchUpInside" id="mXR-jT-7jf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uGf-H9-vVy" firstAttribute="leading" secondItem="8wa-jF-Sj2" secondAttribute="leading" id="3Rh-bv-Ajh"/>
+                            <constraint firstItem="PUK-Gp-Emj" firstAttribute="centerY" secondItem="8wa-jF-Sj2" secondAttribute="centerY" id="Ao1-Lx-1wC"/>
+                            <constraint firstItem="PUK-Gp-Emj" firstAttribute="centerX" secondItem="8wa-jF-Sj2" secondAttribute="centerX" id="cqf-lM-xJS"/>
+                            <constraint firstItem="uGf-H9-vVy" firstAttribute="top" secondItem="8wa-jF-Sj2" secondAttribute="top" id="ghi-vV-gN2"/>
+                            <constraint firstAttribute="width" constant="66" id="qNu-Rz-AxS"/>
+                            <constraint firstAttribute="trailing" secondItem="uGf-H9-vVy" secondAttribute="trailing" id="vMh-OS-fnu"/>
+                            <constraint firstAttribute="bottom" secondItem="uGf-H9-vVy" secondAttribute="bottom" id="zgk-kk-jwL"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="1JT-Ry-vHK" firstAttribute="top" secondItem="pbn-FE-cwy" secondAttribute="bottom" id="1tK-xB-3fs"/>
+                    <constraint firstAttribute="trailing" secondItem="8wa-jF-Sj2" secondAttribute="trailing" id="H5t-lt-gJX"/>
+                    <constraint firstItem="8wa-jF-Sj2" firstAttribute="leading" secondItem="pbn-FE-cwy" secondAttribute="trailing" id="M4j-Zx-Laf"/>
+                    <constraint firstItem="pbn-FE-cwy" firstAttribute="leading" secondItem="ZCk-VR-ThK" secondAttribute="leading" constant="16" id="RUE-g0-sXm"/>
+                    <constraint firstAttribute="bottom" secondItem="8wa-jF-Sj2" secondAttribute="bottom" id="WxM-ud-zhb"/>
+                    <constraint firstItem="1JT-Ry-vHK" firstAttribute="leading" secondItem="pbn-FE-cwy" secondAttribute="leading" id="bm9-tv-Phs"/>
+                    <constraint firstItem="8wa-jF-Sj2" firstAttribute="leading" secondItem="pbn-FE-cwy" secondAttribute="trailing" id="lrB-gb-NJ8"/>
+                    <constraint firstItem="8wa-jF-Sj2" firstAttribute="top" secondItem="ZCk-VR-ThK" secondAttribute="top" id="p2Q-tX-aS0"/>
+                    <constraint firstItem="pbn-FE-cwy" firstAttribute="top" secondItem="ZCk-VR-ThK" secondAttribute="top" constant="16" id="wxP-fq-k7Z"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="lrB-gb-NJ8"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="actionButton" destination="uGf-H9-vVy" id="b8Z-0I-6Fk"/>
+                <outlet property="circleProgressView" destination="PUK-Gp-Emj" id="axY-JS-IIC"/>
+                <outlet property="detailLabel" destination="1JT-Ry-vHK" id="lz6-Ve-2hc"/>
+                <outlet property="fileNameLabel" destination="pbn-FE-cwy" id="Ol6-x1-t6F"/>
+            </connections>
+            <point key="canvasLocation" x="302" y="319"/>
+        </tableViewCell>
+    </objects>
+</document>
