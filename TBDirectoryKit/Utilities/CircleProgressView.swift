@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 @objc @IBDesignable public class CircleProgressView: UIView {
 
     internal struct Constants {
@@ -41,15 +42,15 @@ import UIKit
         didSet { setNeedsDisplay() }
     }
 
-    @IBInspectable public var trackBackgroundColor: UIColor = UIColor.grayColor() {
+    @IBInspectable public dynamic var trackBackgroundColor: UIColor = UIColor.grayColor() {
         didSet { setNeedsDisplay() }
     }
 
-    @IBInspectable public var trackFillColor: UIColor = UIColor.blueColor() {
+    @IBInspectable public dynamic var trackFillColor: UIColor = UIColor.blueColor() {
         didSet { setNeedsDisplay() }
     }
 
-    @IBInspectable public var trackBorderColor:UIColor = UIColor.clearColor() {
+    @IBInspectable public dynamic var trackBorderColor:UIColor = UIColor.clearColor() {
         didSet { setNeedsDisplay() }
     }
 
@@ -57,7 +58,7 @@ import UIKit
         didSet { setNeedsDisplay() }
     }
 
-    @IBInspectable public var centerFillColor: UIColor = UIColor.whiteColor() {
+    @IBInspectable public dynamic var centerFillColor: UIColor = UIColor.whiteColor() {
         didSet { setNeedsDisplay() }
     }
     
