@@ -20,6 +20,8 @@ public class TBFileCell: UITableViewCell {
     
     public weak var delegate: TBFileCellDelegate?
     
+    public var indexPath: NSIndexPath?
+    
     @IBOutlet public weak var fileNameLabel: UILabel!
     @IBOutlet public weak var detailLabel: UILabel!
     @IBOutlet public weak var actionButton: UIButton!
@@ -57,6 +59,7 @@ public class TBFileCell: UITableViewCell {
         configureUnknownState()
         fileNameLabel.text = ""
         detailLabel.text = ""
+        indexPath = nil
     }
     
     
