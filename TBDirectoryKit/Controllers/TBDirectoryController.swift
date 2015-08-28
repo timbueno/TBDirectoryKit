@@ -14,7 +14,6 @@ public class TBDirectoryController: UITableViewController, TBFileCellDelegate {
 
     
     deinit {
-        print("Deinitialization of Directory Controller")
     }
 
     override public func viewDidLoad() {
