@@ -8,6 +8,9 @@
 
 import UIKit
 
+
+let TBDirBundleIdentifier = "com.timbueno.TBDirectoryKit"
+
 public class TBDirectoryController: UITableViewController, TBFileCellDelegate {
     
     public var subDirectoryController: TBDirectoryController!
@@ -21,14 +24,17 @@ public class TBDirectoryController: UITableViewController, TBFileCellDelegate {
         
         tableView.rowHeight = 66
         
-        let fileCellNib = UINib(nibName: "TBFileCell", bundle: NSBundle(identifier: "com.timbueno.TBDirectoryKit"))
+        let fileCellNib = UINib(nibName: "TBFileCell", bundle: NSBundle(identifier: TBDirBundleIdentifier))
         tableView.registerNib(fileCellNib, forCellReuseIdentifier: "TBFileCell")
         
-        let folderCellNib = UINib(nibName: "TBFolderCell", bundle: NSBundle(identifier: "com.timbueno.TBDirectoryKit"))
+        let folderCellNib = UINib(nibName: "TBFolderCell", bundle: NSBundle(identifier: TBDirBundleIdentifier))
         tableView.registerNib(folderCellNib, forCellReuseIdentifier: "TBFolderCell")
         
-        let loadingCellNib = UINib(nibName: "TBLoadingCell", bundle: NSBundle(identifier: "com.timbueno.TBDirectoryKit"))
+        let loadingCellNib = UINib(nibName: "TBLoadingCell", bundle: NSBundle(identifier: TBDirBundleIdentifier))
         tableView.registerNib(loadingCellNib, forCellReuseIdentifier: "TBLoadingCell")
+        
+        let messageCellNib = UINib(nibName: "TBMessageCell", bundle: NSBundle(identifier: TBDirBundleIdentifier))
+        tableView.registerNib(messageCellNib, forCellReuseIdentifier: "TBMessageCell")
     }
     
     override public func viewWillAppear(animated: Bool) {
@@ -92,12 +98,3 @@ extension TBDirectoryController {
     }
 
 }
-
-
-//extension TBDirectoryController: TBFileCellDelegate {
-//    
-//    public func actionButtonPressed(sender: UIButton, inCell: TBFileCell) {
-//        print("Pressed the action button!")
-//    }
-//    
-//}
