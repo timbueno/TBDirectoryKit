@@ -64,7 +64,7 @@ extension TBDirectoryController {
     }
 
     override public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     override public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -77,9 +77,12 @@ extension TBDirectoryController {
         } else if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCellWithIdentifier("TBFolderCell", forIndexPath: indexPath) as! TBFolderCell
             return cell
-        } else {
+        } else if indexPath.row == 2 {
             let cell = tableView.dequeueReusableCellWithIdentifier("TBFileCell", forIndexPath: indexPath) as! TBFileCell
             cell.delegate = self
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCellWithIdentifier("TBMessageCell", forIndexPath: indexPath) as! TBMessageCell
             return cell
         }
         

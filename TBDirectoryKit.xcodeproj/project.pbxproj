@@ -122,8 +122,8 @@
 				22E4668C1B7FC4E700AF89BC /* TBFolderCell.xib */,
 				22E4668D1B7FC4E700AF89BC /* TBLoadingCell.swift */,
 				22E4668E1B7FC4E700AF89BC /* TBLoadingCell.xib */,
-				2227917D1B921CD700404A4E /* TBMessageCell.xib */,
 				2227917F1B921DB000404A4E /* TBMessageCell.swift */,
+				2227917D1B921CD700404A4E /* TBMessageCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
