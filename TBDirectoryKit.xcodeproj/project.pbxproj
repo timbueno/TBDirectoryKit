@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2227917E1B921CD700404A4E /* TBMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2227917D1B921CD700404A4E /* TBMessageCell.xib */; settings = {ASSET_TAGS = (); }; };
 		222791801B921DB000404A4E /* TBMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2227917F1B921DB000404A4E /* TBMessageCell.swift */; settings = {ASSET_TAGS = (); }; };
+		222C91E61BA8FFEF003DF9FA /* TBUtilityInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222C91E41BA8FFEF003DF9FA /* TBUtilityInfoCell.swift */; settings = {ASSET_TAGS = (); }; };
+		222C91E71BA8FFEF003DF9FA /* TBUtilityInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 222C91E51BA8FFEF003DF9FA /* TBUtilityInfoCell.xib */; settings = {ASSET_TAGS = (); }; };
 		22E466711B7FC4B800AF89BC /* TBDirectoryKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 22E466701B7FC4B800AF89BC /* TBDirectoryKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22E466781B7FC4B800AF89BC /* TBDirectoryKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E4666D1B7FC4B800AF89BC /* TBDirectoryKit.framework */; };
 		22E4667D1B7FC4B800AF89BC /* TBDirectoryKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4667C1B7FC4B800AF89BC /* TBDirectoryKitTests.swift */; };
@@ -37,6 +39,8 @@
 /* Begin PBXFileReference section */
 		2227917D1B921CD700404A4E /* TBMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBMessageCell.xib; sourceTree = "<group>"; };
 		2227917F1B921DB000404A4E /* TBMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBMessageCell.swift; sourceTree = "<group>"; };
+		222C91E41BA8FFEF003DF9FA /* TBUtilityInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBUtilityInfoCell.swift; sourceTree = "<group>"; };
+		222C91E51BA8FFEF003DF9FA /* TBUtilityInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBUtilityInfoCell.xib; sourceTree = "<group>"; };
 		22E4666D1B7FC4B800AF89BC /* TBDirectoryKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TBDirectoryKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22E466701B7FC4B800AF89BC /* TBDirectoryKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBDirectoryKit.h; sourceTree = "<group>"; };
 		22E466721B7FC4B800AF89BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -124,6 +128,8 @@
 				22E4668E1B7FC4E700AF89BC /* TBLoadingCell.xib */,
 				2227917F1B921DB000404A4E /* TBMessageCell.swift */,
 				2227917D1B921CD700404A4E /* TBMessageCell.xib */,
+				222C91E41BA8FFEF003DF9FA /* TBUtilityInfoCell.swift */,
+				222C91E51BA8FFEF003DF9FA /* TBUtilityInfoCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -240,6 +246,7 @@
 			files = (
 				22E466931B7FC4E700AF89BC /* TBFileCell.xib in Resources */,
 				2227917E1B921CD700404A4E /* TBMessageCell.xib in Resources */,
+				222C91E71BA8FFEF003DF9FA /* TBUtilityInfoCell.xib in Resources */,
 				22E466971B7FC4E700AF89BC /* TBLoadingCell.xib in Resources */,
 				22E466951B7FC4E700AF89BC /* TBFolderCell.xib in Resources */,
 			);
@@ -262,6 +269,7 @@
 				22E466961B7FC4E700AF89BC /* TBLoadingCell.swift in Sources */,
 				222791801B921DB000404A4E /* TBMessageCell.swift in Sources */,
 				22E466911B7FC4E700AF89BC /* TBDirectoryIcons.swift in Sources */,
+				222C91E61BA8FFEF003DF9FA /* TBUtilityInfoCell.swift in Sources */,
 				22E466921B7FC4E700AF89BC /* TBFileCell.swift in Sources */,
 				22E4669D1B7FC58C00AF89BC /* CircleProgressView.swift in Sources */,
 				22E466981B7FC4E700AF89BC /* UIImage+AddInsets.swift in Sources */,
