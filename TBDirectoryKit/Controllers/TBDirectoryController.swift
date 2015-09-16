@@ -35,6 +35,9 @@ public class TBDirectoryController: UITableViewController, TBFileCellDelegate {
         
         let messageCellNib = UINib(nibName: "TBMessageCell", bundle: NSBundle(identifier: TBDirBundleIdentifier))
         tableView.registerNib(messageCellNib, forCellReuseIdentifier: "TBMessageCell")
+        
+        let utilityInfoCellNib = UINib(nibName: "TBUtilityInfoCell", bundle: NSBundle(identifier: TBDirBundleIdentifier))
+        tableView.registerNib(utilityInfoCellNib, forCellReuseIdentifier: "TBUtilityInfoCell")
     }
     
     override public func viewWillAppear(animated: Bool) {
