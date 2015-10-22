@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2227917E1B921CD700404A4E /* TBMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2227917D1B921CD700404A4E /* TBMessageCell.xib */; settings = {ASSET_TAGS = (); }; };
-		222791801B921DB000404A4E /* TBMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2227917F1B921DB000404A4E /* TBMessageCell.swift */; settings = {ASSET_TAGS = (); }; };
-		222C91E61BA8FFEF003DF9FA /* TBUtilityInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222C91E41BA8FFEF003DF9FA /* TBUtilityInfoCell.swift */; settings = {ASSET_TAGS = (); }; };
-		222C91E71BA8FFEF003DF9FA /* TBUtilityInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 222C91E51BA8FFEF003DF9FA /* TBUtilityInfoCell.xib */; settings = {ASSET_TAGS = (); }; };
+		2227917E1B921CD700404A4E /* TBMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2227917D1B921CD700404A4E /* TBMessageCell.xib */; };
+		222791801B921DB000404A4E /* TBMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2227917F1B921DB000404A4E /* TBMessageCell.swift */; };
+		222C91E61BA8FFEF003DF9FA /* TBUtilityInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222C91E41BA8FFEF003DF9FA /* TBUtilityInfoCell.swift */; };
+		222C91E71BA8FFEF003DF9FA /* TBUtilityInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 222C91E51BA8FFEF003DF9FA /* TBUtilityInfoCell.xib */; };
 		22E466711B7FC4B800AF89BC /* TBDirectoryKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 22E466701B7FC4B800AF89BC /* TBDirectoryKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22E466781B7FC4B800AF89BC /* TBDirectoryKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E4666D1B7FC4B800AF89BC /* TBDirectoryKit.framework */; };
 		22E4667D1B7FC4B800AF89BC /* TBDirectoryKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4667C1B7FC4B800AF89BC /* TBDirectoryKitTests.swift */; };
