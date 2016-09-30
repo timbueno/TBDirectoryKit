@@ -11,31 +11,31 @@ import UIKit
 
 public protocol TBUtilityInfoCellDelegate: class {
     
-    func utilityCellButtonPressed(sender: UIButton, inCell cell: TBUtilityInfoCell)
+    func utilityCellButtonPressed(_ sender: UIButton, inCell cell: TBUtilityInfoCell)
     
 }
 
 
-public class TBUtilityInfoCell: UITableViewCell {
+open class TBUtilityInfoCell: UITableViewCell {
     
-    public weak var delegate: TBUtilityInfoCellDelegate?
+    open weak var delegate: TBUtilityInfoCellDelegate?
     
-    @IBOutlet public weak var actionButton: UIButton!
-    @IBOutlet public weak var lineOneLabel: UILabel!
-    @IBOutlet public weak var lineTwoLabel: UILabel!
+    @IBOutlet open weak var actionButton: UIButton!
+    @IBOutlet open weak var lineOneLabel: UILabel!
+    @IBOutlet open weak var lineTwoLabel: UILabel!
 
     
-    public override func awakeFromNib() {
+    open override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        selectionStyle = .None
+        selectionStyle = .none
     }
     
-    public override func prepareForReuse() {
+    open override func prepareForReuse() {
         delegate = nil
     }
 
-    public override func setSelected(selected: Bool, animated: Bool) {
+    open override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
@@ -46,7 +46,7 @@ public class TBUtilityInfoCell: UITableViewCell {
     // MARK: - IB Actions
     // ------------------------------------------------------------------------
     
-    @IBAction public func utilityCellButtonPressed(sender: UIButton) {
+    @IBAction open func utilityCellButtonPressed(_ sender: UIButton) {
         delegate?.utilityCellButtonPressed(sender, inCell: self)
     }
     

@@ -11,51 +11,51 @@ import UIKit
 
 public protocol TBFileCellDelegate: class {
     
-    func actionButtonPressed(sender: UIButton, inCell cell: TBFileCell)
+    func actionButtonPressed(_ sender: UIButton, inCell cell: TBFileCell)
     
 }
 
 
-public class TBFileCell: UITableViewCell {
+open class TBFileCell: UITableViewCell {
     
-    public weak var delegate: TBFileCellDelegate?
+    open weak var delegate: TBFileCellDelegate?
     
-    public var indexPath: NSIndexPath?
+    open var indexPath: IndexPath?
     
-    @IBOutlet public weak var fileNameLabel: UILabel!
-    @IBOutlet public weak var detailLabel: UILabel!
-    @IBOutlet public weak var actionButton: UIButton!
-    @IBOutlet public weak var circleProgressView: CircleProgressView!
+    @IBOutlet open weak var fileNameLabel: UILabel!
+    @IBOutlet open weak var detailLabel: UILabel!
+    @IBOutlet open weak var actionButton: UIButton!
+    @IBOutlet open weak var circleProgressView: CircleProgressView!
     
     public enum DownloadState {
-        case Unknown
-        case Waiting
-        case Downloading
-        case Paused
-        case Finished
-        case Cancelled
-        case Failed
+        case unknown
+        case waiting
+        case downloading
+        case paused
+        case finished
+        case cancelled
+        case failed
     }
-    public var downloadState = DownloadState.Unknown {
+    open var downloadState = DownloadState.unknown {
         didSet {
             configureActionButtonForState(downloadState)
         }
     }
     
 
-    override public func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         configureUnknownState()
     }
 
-    override public func setSelected(selected: Bool, animated: Bool) {
+    override open func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     
-    override public func prepareForReuse() {
+    override open func prepareForReuse() {
         configureUnknownState()
         fileNameLabel.text = ""
         detailLabel.text = ""
@@ -63,21 +63,21 @@ public class TBFileCell: UITableViewCell {
     }
     
     
-    public func configureActionButtonForState(state: TBFileCell.DownloadState) {
+    open func configureActionButtonForState(_ state: TBFileCell.DownloadState) {
         switch state {
-        case .Unknown:
+        case .unknown:
             configureUnknownState()
-        case .Waiting:
+        case .waiting:
             configureWaitingState()
-        case .Downloading:
+        case .downloading:
             configureDownloadingState()
-        case .Paused:
+        case .paused:
             configurePausedState()
-        case .Finished:
+        case .finished:
             configureFinishedState()
-        case .Cancelled:
+        case .cancelled:
             configureCancelledState()
-        case .Failed:
+        case .failed:
             configureFailedState()
         }
     }
@@ -87,32 +87,32 @@ public class TBFileCell: UITableViewCell {
     // MARK: - Download State Images
     // ------------------------------------------------------------------------
     
-    public func imageForDownload() -> UIImage {
-        return TBDirectoryIcons.imageOfDownloadIcon(frame: CGRectMake(0, 0, 25, 25), color: UIColor.blackColor())
+    open func imageForDownload() -> UIImage {
+        return TBDirectoryIcons.imageOfDownloadIcon(frame: CGRect(x: 0, y: 0, width: 25, height: 25), color: UIColor.black)
     }
     
-    public func imageForWaiting() -> UIImage {
-        return TBDirectoryIcons.imageOfInProgressIcon(frame: CGRectMake(0, 0, 15, 15), color: UIColor.blackColor())
+    open func imageForWaiting() -> UIImage {
+        return TBDirectoryIcons.imageOfInProgressIcon(frame: CGRect(x: 0, y: 0, width: 15, height: 15), color: UIColor.black)
     }
     
-    public func imageForPause() -> UIImage {
-        return TBDirectoryIcons.imageOfPauseIcon(frame: CGRectMake(0, 0, 10, 10), color: UIColor.blackColor())
+    open func imageForPause() -> UIImage {
+        return TBDirectoryIcons.imageOfPauseIcon(frame: CGRect(x: 0, y: 0, width: 10, height: 10), color: UIColor.black)
     }
     
-    public func imageForResume() -> UIImage {
-        return TBDirectoryIcons.imageOfDownloadIcon(frame: CGRectMake(0, 0, 15, 15), color: UIColor.blackColor())
+    open func imageForResume() -> UIImage {
+        return TBDirectoryIcons.imageOfDownloadIcon(frame: CGRect(x: 0, y: 0, width: 15, height: 15), color: UIColor.black)
     }
     
-    public func imageForFinished() -> UIImage {
-        return TBDirectoryIcons.imageOfCompleteIcon(frame: CGRectMake(0, 0, 35, 35), color: UIColor.blackColor())
+    open func imageForFinished() -> UIImage {
+        return TBDirectoryIcons.imageOfCompleteIcon(frame: CGRect(x: 0, y: 0, width: 35, height: 35), color: UIColor.black)
     }
     
-    public func imageForCancelled() -> UIImage {
-        return TBDirectoryIcons.imageOfDownloadIcon(frame: CGRectMake(0, 0, 25, 25), color: UIColor.blackColor())
+    open func imageForCancelled() -> UIImage {
+        return TBDirectoryIcons.imageOfDownloadIcon(frame: CGRect(x: 0, y: 0, width: 25, height: 25), color: UIColor.black)
     }
     
-    public func imageForFailed() -> UIImage {
-        return TBDirectoryIcons.imageOfCautionIcon(frame: CGRectMake(0, 0, 25, 25), color: UIColor.blackColor())
+    open func imageForFailed() -> UIImage {
+        return TBDirectoryIcons.imageOfCautionIcon(frame: CGRect(x: 0, y: 0, width: 25, height: 25), color: UIColor.black)
     }
     
     
@@ -122,39 +122,39 @@ public class TBFileCell: UITableViewCell {
     
     func configureUnknownState() {
         setActionButtonImage(imageForDownload())
-        circleProgressView.hidden = true
+        circleProgressView.isHidden = true
         setProgress(0.0)
     }
     
     func configureWaitingState() {
         setActionButtonImage(imageForWaiting())
-        circleProgressView.hidden = false
+        circleProgressView.isHidden = false
     }
     
     func configureDownloadingState() {
         setActionButtonImage(imageForPause())
-        circleProgressView.hidden = false
+        circleProgressView.isHidden = false
     }
     
     func configurePausedState() {
         setActionButtonImage(imageForResume())
-        circleProgressView.hidden = false
+        circleProgressView.isHidden = false
     }
     
     func configureFinishedState() {
         setActionButtonImage(imageForFinished())
         setProgress(1.0)
-        circleProgressView.hidden = true
+        circleProgressView.isHidden = true
     }
     
     func configureCancelledState() {
-        circleProgressView.hidden = false
+        circleProgressView.isHidden = false
         setProgress(0.0)
     }
     
     func configureFailedState() {
         setActionButtonImage(imageForFailed())
-        circleProgressView.hidden = true
+        circleProgressView.isHidden = true
     }
     
     
@@ -162,12 +162,12 @@ public class TBFileCell: UITableViewCell {
     // MARK: - Component Configuration
     // ------------------------------------------------------------------------
     
-    public func setActionButtonImage(image: UIImage) {
-        actionButton.setImage(UIImage.addBorder(frame: actionButton.frame, image: image), forState: .Normal)
+    open func setActionButtonImage(_ image: UIImage) {
+        actionButton.setImage(UIImage.addBorder(frame: actionButton.frame, image: image), for: UIControlState())
     }
     
     
-    public func setProgress(progress: Double) {
+    open func setProgress(_ progress: Double) {
         circleProgressView.progress = progress
     }
     
@@ -176,7 +176,7 @@ public class TBFileCell: UITableViewCell {
     // MARK: - IB Actions
     // ------------------------------------------------------------------------
     
-    @IBAction public func actionButtonPressed(sender: UIButton) {
+    @IBAction open func actionButtonPressed(_ sender: UIButton) {
         delegate?.actionButtonPressed(sender, inCell: self)
     }
 
