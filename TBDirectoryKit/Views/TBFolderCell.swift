@@ -8,27 +8,27 @@
 
 import UIKit
 
-public class TBFolderCell: UITableViewCell {
+open class TBFolderCell: UITableViewCell {
     
-    @IBOutlet public weak var folderImage: UIImageView!
-    @IBOutlet public weak var nameLabel: UILabel!
+    @IBOutlet open weak var folderImage: UIImageView!
+    @IBOutlet open weak var nameLabel: UILabel!
     
-    public var indexPath: NSIndexPath?
+    open var indexPath: IndexPath?
     
-    override public func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         
-        folderImage.image = TBDirectoryIcons.imageOfFolderIcon(frame: CGRectMake(0, 0, 30, 30), color: UIColor.blackColor()).imageWithRenderingMode(.AlwaysTemplate)
+        folderImage.image = TBDirectoryIcons.imageOfFolderIcon(frame: CGRect(x: 0, y: 0, width: 30, height: 30), color: UIColor.black).withRenderingMode(.alwaysTemplate)
     }
 
-    override public func setSelected(selected: Bool, animated: Bool) {
+    override open func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     
-    override public func prepareForReuse() {
+    override open func prepareForReuse() {
         nameLabel.text = ""
         indexPath = nil
     }

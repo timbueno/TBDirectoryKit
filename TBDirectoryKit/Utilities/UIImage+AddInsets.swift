@@ -11,20 +11,20 @@ import Foundation
 
 public extension UIImage {
     
-    public class func addBorder(frame frame: CGRect, image: UIImage) -> UIImage {
+    public class func addBorder(frame: CGRect, image: UIImage) -> UIImage {
         
         let width = frame.size.width
         let height = frame.size.height
         
         UIGraphicsBeginImageContextWithOptions(frame.size, false, 0)
         
-        let origin = CGPointMake((width - image.size.width) / 2.0, (height - image.size.height) / 2.0)
-        image.drawAtPoint(origin)
+        let origin = CGPoint(x: (width - image.size.width) / 2.0, y: (height - image.size.height) / 2.0)
+        image.draw(at: origin)
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         
         UIGraphicsEndImageContext()
         
-        return newImage
+        return newImage!
     }
     
 }

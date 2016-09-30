@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2227917E1B921CD700404A4E /* TBMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2227917D1B921CD700404A4E /* TBMessageCell.xib */; settings = {ASSET_TAGS = (); }; };
-		222791801B921DB000404A4E /* TBMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2227917F1B921DB000404A4E /* TBMessageCell.swift */; settings = {ASSET_TAGS = (); }; };
+		2227917E1B921CD700404A4E /* TBMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2227917D1B921CD700404A4E /* TBMessageCell.xib */; };
+		222791801B921DB000404A4E /* TBMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2227917F1B921DB000404A4E /* TBMessageCell.swift */; };
+		222C91E61BA8FFEF003DF9FA /* TBUtilityInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222C91E41BA8FFEF003DF9FA /* TBUtilityInfoCell.swift */; };
+		222C91E71BA8FFEF003DF9FA /* TBUtilityInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 222C91E51BA8FFEF003DF9FA /* TBUtilityInfoCell.xib */; };
 		22E466711B7FC4B800AF89BC /* TBDirectoryKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 22E466701B7FC4B800AF89BC /* TBDirectoryKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22E466781B7FC4B800AF89BC /* TBDirectoryKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E4666D1B7FC4B800AF89BC /* TBDirectoryKit.framework */; };
 		22E4667D1B7FC4B800AF89BC /* TBDirectoryKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E4667C1B7FC4B800AF89BC /* TBDirectoryKitTests.swift */; };
@@ -37,6 +39,8 @@
 /* Begin PBXFileReference section */
 		2227917D1B921CD700404A4E /* TBMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBMessageCell.xib; sourceTree = "<group>"; };
 		2227917F1B921DB000404A4E /* TBMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBMessageCell.swift; sourceTree = "<group>"; };
+		222C91E41BA8FFEF003DF9FA /* TBUtilityInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBUtilityInfoCell.swift; sourceTree = "<group>"; };
+		222C91E51BA8FFEF003DF9FA /* TBUtilityInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBUtilityInfoCell.xib; sourceTree = "<group>"; };
 		22E4666D1B7FC4B800AF89BC /* TBDirectoryKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TBDirectoryKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22E466701B7FC4B800AF89BC /* TBDirectoryKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBDirectoryKit.h; sourceTree = "<group>"; };
 		22E466721B7FC4B800AF89BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -122,8 +126,10 @@
 				22E4668C1B7FC4E700AF89BC /* TBFolderCell.xib */,
 				22E4668D1B7FC4E700AF89BC /* TBLoadingCell.swift */,
 				22E4668E1B7FC4E700AF89BC /* TBLoadingCell.xib */,
-				2227917D1B921CD700404A4E /* TBMessageCell.xib */,
 				2227917F1B921DB000404A4E /* TBMessageCell.swift */,
+				2227917D1B921CD700404A4E /* TBMessageCell.xib */,
+				222C91E41BA8FFEF003DF9FA /* TBUtilityInfoCell.swift */,
+				222C91E51BA8FFEF003DF9FA /* TBUtilityInfoCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -203,16 +209,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Tim Bueno";
 				TargetAttributes = {
 					22E4666C1B7FC4B800AF89BC = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = AHKVBQHP6Z;
+						LastSwiftMigration = 0800;
 					};
 					22E466761B7FC4B800AF89BC = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = AHKVBQHP6Z;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -241,6 +248,7 @@
 			files = (
 				22E466931B7FC4E700AF89BC /* TBFileCell.xib in Resources */,
 				2227917E1B921CD700404A4E /* TBMessageCell.xib in Resources */,
+				222C91E71BA8FFEF003DF9FA /* TBUtilityInfoCell.xib in Resources */,
 				22E466971B7FC4E700AF89BC /* TBLoadingCell.xib in Resources */,
 				22E466951B7FC4E700AF89BC /* TBFolderCell.xib in Resources */,
 			);
@@ -263,6 +271,7 @@
 				22E466961B7FC4E700AF89BC /* TBLoadingCell.swift in Sources */,
 				222791801B921DB000404A4E /* TBMessageCell.swift in Sources */,
 				22E466911B7FC4E700AF89BC /* TBDirectoryIcons.swift in Sources */,
+				222C91E61BA8FFEF003DF9FA /* TBUtilityInfoCell.swift in Sources */,
 				22E466921B7FC4E700AF89BC /* TBFileCell.swift in Sources */,
 				22E4669D1B7FC58C00AF89BC /* CircleProgressView.swift in Sources */,
 				22E466981B7FC4E700AF89BC /* UIImage+AddInsets.swift in Sources */,
@@ -303,8 +312,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -351,8 +362,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -372,6 +385,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -383,6 +397,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -395,6 +411,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -402,6 +419,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -413,6 +432,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.timbueno.TBDirectoryKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -423,6 +443,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.timbueno.TBDirectoryKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -433,6 +454,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.timbueno.TBDirectoryKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

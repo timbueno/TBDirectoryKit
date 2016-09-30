@@ -8,24 +8,24 @@
 
 import UIKit
 
-class TBMessageCell: UITableViewCell {
+open class TBMessageCell: UITableViewCell {
     
     
-    @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet open weak var messageLabel: UILabel!
     
 
-    override func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override open func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     
-    func setMessage(message: String) {
+    open func setMessage(_ message: String) {
         messageLabel.text = message
     }
 

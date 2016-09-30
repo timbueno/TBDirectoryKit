@@ -8,27 +8,27 @@
 
 import UIKit
 
-public class TBLoadingCell: UITableViewCell {
+open class TBLoadingCell: UITableViewCell {
     
-    @IBOutlet public weak var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet public weak var loadingLabel: UILabel!
+    @IBOutlet open weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet open weak var loadingLabel: UILabel!
     
 
-    override public func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    override public func setSelected(selected: Bool, animated: Bool) {
+    override open func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     
     
-    public func hideContents(hidden: Bool) {
-        activityIndicator.hidden = hidden
-        loadingLabel.hidden = hidden
+    open func hideContents(_ hidden: Bool) {
+        activityIndicator.isHidden = hidden
+        loadingLabel.isHidden = hidden
     }
 
 }
