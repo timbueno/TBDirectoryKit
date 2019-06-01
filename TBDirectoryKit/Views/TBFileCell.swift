@@ -163,7 +163,7 @@ open class TBFileCell: UITableViewCell {
     // ------------------------------------------------------------------------
     
     open func setActionButtonImage(_ image: UIImage) {
-        actionButton.setImage(UIImage.addBorder(frame: actionButton.frame, image: image), for: UIControlState())
+        actionButton.setImage(UIImage.addBorder(frame: actionButton.frame, image: image), for: UIControl.State())
     }
     
     

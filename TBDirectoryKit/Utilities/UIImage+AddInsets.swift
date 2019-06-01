@@ -11,7 +11,7 @@ import Foundation
 
 public extension UIImage {
     
-    public class func addBorder(frame: CGRect, image: UIImage) -> UIImage {
+    class func addBorder(frame: CGRect, image: UIImage) -> UIImage {
         
         let width = frame.size.width
         let height = frame.size.height
